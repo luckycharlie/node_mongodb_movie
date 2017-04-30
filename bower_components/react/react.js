@@ -784,7 +784,7 @@ var RESERVED_SPEC_KEYS = {
     Constructor.contextTypes = _assign({}, Constructor.contextTypes, contextTypes);
   },
   /**
-   * Special case getDefaultProps which should move into statics but requires
+   * Special case getDefaultProps which should movie into statics but requires
    * automatic merging.
    */
   getDefaultProps: function (Constructor, getDefaultProps) {
@@ -1282,7 +1282,7 @@ ReactComponent.prototype.forceUpdate = function (callback) {
 
 /**
  * Deprecated APIs. These APIs used to exist on classic React classes but since
- * we would like to deprecate them, we're not going to move them over to this
+ * we would like to deprecate them, we're not going to movie them over to this
  * modern base class. Instead, we define a getter that warns if it's accessed.
  */
 if ("development" !== 'production') {

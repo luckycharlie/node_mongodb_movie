@@ -1517,7 +1517,7 @@ var DOMChildrenOperations = {
           if ("development" !== 'production') {
             ReactInstrumentation.debugTool.onHostOperation({
               instanceID: parentNodeDebugID,
-              type: 'move child',
+              type: 'movie child',
               payload: { fromIndex: update.fromIndex, toIndex: update.toIndex }
             });
           }
@@ -4395,7 +4395,7 @@ var ReactComponentEnvironment = {
 
   /**
    * Optionally injectable hook for processing a queue of child updates. Will
-   * later move into MultiChildComponents.
+   * later movie into MultiChildComponents.
    */
   processChildrenUpdates: null,
 
@@ -7308,7 +7308,7 @@ function getIEOffsets(node) {
   var selectedRange = selection.createRange();
   var selectedLength = selectedRange.text.length;
 
-  // Duplicate selection so we can move range without breaking user selection.
+  // Duplicate selection so we can movie range without breaking user selection.
   var fromStart = selectedRange.duplicate();
   fromStart.moveToElementText(node);
   fromStart.setEndPoint('EndToStart', selectedRange);
@@ -9624,14 +9624,14 @@ var ReactMultiChild = {
     /**
      * Moves a child component to the supplied index.
      *
-     * @param {ReactComponent} child Component to move.
+     * @param {ReactComponent} child Component to movie.
      * @param {number} toIndex Destination index of the element.
      * @param {number} lastIndex Last index visited of the siblings of `child`.
      * @protected
      */
     moveChild: function (child, afterNode, toIndex, lastIndex) {
       // If the index of `child` is less than `lastIndex`, then it needs to
-      // be moved. Otherwise, we do not need to move it because a child will be
+      // be moved. Otherwise, we do not need to movie it because a child will be
       // inserted or moved before `child`.
       if (child._mountIndex < lastIndex) {
         return makeMove(child, afterNode, toIndex);
@@ -14315,7 +14315,7 @@ var reusableSVGContainer;
  */
 var setInnerHTML = createMicrosoftUnsafeLocalFunction(function (node, html) {
   // IE does not have innerHTML for SVG nodes, so instead we inject the
-  // new markup in a temp node and then move the child nodes across into
+  // new markup in a temp node and then movie the child nodes across into
   // the target node
   if (node.namespaceURI === DOMNamespaces.svg && !('innerHTML' in node)) {
     reusableSVGContainer = reusableSVGContainer || document.createElement('div');
@@ -15616,7 +15616,7 @@ module.exports = emptyObject;
  */
 
 function focusNode(node) {
-  // IE8 can throw "Can't move focus to the control because it is invisible,
+  // IE8 can throw "Can't movie focus to the control because it is invisible,
   // not enabled, or of a type that does not accept the focus." for all kinds of
   // reasons that are too expensive and fragile to test.
   try {
