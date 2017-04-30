@@ -5,7 +5,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('views/movie/index');
 });
-router.get('/a',function(req, res, next){
+router.get('/aa/bb/cc',function(req, res, next){
   res.json({ title: '111111111' });
 })
 module.exports = router;
